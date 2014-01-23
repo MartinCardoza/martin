@@ -44,6 +44,57 @@
 </ul><p>Przykładowe zadania na podane wyżej można znaleźć  <a href="https://inf.ug.edu.pl/~stefan/Dydaktyka/WstepDoProg/Slajdy/lab-zadania1.pdf">tu</a>, <a>tu</a> i <a href="https://inf.ug.edu.pl/~stefan/Dydaktyka/WstepDoProg/Slajdy/lab-zadania3.pdf">tu</a> </p>
 
 
+
+<p><strong>Skrypty</strong></p>
+
+<p>1.Skrypt dopisujący do plików w danym folderze .old</p>
+
+<pre><code>
+#!/bin/bash
+
+ for nazwa in `ls`
+     do
+       echo "$0"
+       echo "$nazwa"
+           if [ $nazwa != `basename $0` ]
+       then
+       cp $nazwa $nazwa"_old"
+      fi
+     done
+ exit 0
+</code></pre>
+
+<p></p>
+
+<ol>
+<li>Skrypt z pętlą for</li>
+</ol><p></p><pre><code>
+
+<h1>
+<a name="binbash" class="anchor" href="#binbash"><span class="octicon octicon-link"></span></a>!/bin/bash</h1>
+
+<p>for (( i = 1 ; i &lt;= 5; i++ )) 
+do 
+echo "Dostałem dzisiaj $i" 
+done </p></code></pre>
+
+<ol>
+<li>Skrypt sprawdza która liczba jest większa</li>
+</ol><p></p><pre><code>
+
+<h1>
+<a name="binbash-1" class="anchor" href="#binbash-1"><span class="octicon octicon-link"></span></a>!/bin/bash</h1>
+
+<p>if [ $1 -gt $2 ]
+then
+echo "pierwsza liczba jest większa"
+elif [ $1 -le $2 ]
+echo "druga liczba jest wieksza"
+else
+echo "liczby są równe"
+fi
+</p>
+<pre></pre></code></pre>
       </section>
     </div>
 
